@@ -7,7 +7,7 @@ namespace Qonq.Medium.Tests
         [Fact]
         public async Task GetUserTest()
         {
-            var accessToken = "";
+            var accessToken = Environment.GetEnvironmentVariable("MEDIUM_ACCESS_TOKEN");
             var client = new MediumClient(accessToken);
             var response = await client.GetCurrentUserAsync();
 
@@ -16,10 +16,11 @@ namespace Qonq.Medium.Tests
         [Fact]
         public async Task CreateNewPostTest()
         {
-            var accessToken = "";
+            var accessToken = Environment.GetEnvironmentVariable("MEDIUM_ACCESS_TOKEN");
             var client = new MediumClient(accessToken);
+            var userResponse = await client.GetCurrentUserAsync();
 
-            var authorId = "foo";
+            var authorId = userResponse.Data.Id;
             var newPostRequest = new NewPostRequest()
             {
                 Title = "Beep Beep Boop",
