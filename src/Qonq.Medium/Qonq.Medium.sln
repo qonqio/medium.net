@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qonq.Medium", "Qonq.Medium.csproj", "{2594FED7-E9C1-483E-AB56-813C1A397EC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qonq.Medium.Tests", "..\Qonq.Medium.Tests\Qonq.Medium.Tests.csproj", "{D600DA27-3BD9-4004-8D6C-A400AA1AB4C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2594FED7-E9C1-483E-AB56-813C1A397EC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2594FED7-E9C1-483E-AB56-813C1A397EC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2594FED7-E9C1-483E-AB56-813C1A397EC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2594FED7-E9C1-483E-AB56-813C1A397EC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D600DA27-3BD9-4004-8D6C-A400AA1AB4C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D600DA27-3BD9-4004-8D6C-A400AA1AB4C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D600DA27-3BD9-4004-8D6C-A400AA1AB4C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D600DA27-3BD9-4004-8D6C-A400AA1AB4C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5BBEDEB2-14C5-4FCA-A171-CBB0754C7C6E}
+	EndGlobalSection
+EndGlobal

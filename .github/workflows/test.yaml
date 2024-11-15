@@ -1,0 +1,38 @@
+name: Run Unit Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the code
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up .NET
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.x' # Adjust to match your target .NET version
+
+      # Step 3: Restore dependencies
+      - name: Restore dependencies
+        run: dotnet restore src/Qonq.Medium.Tests/Qonq.Medium.Tests.csproj
+
+      # Step 4: Run tests
+      - name: Run Unit Tests
+        env:
+          MEDIUM_ACCESS_TOKEN: ${{ secrets.MEDIUM_ACCESS_TOKEN }}
+        run: dotnet test src/Qonq.Medium.Tests/Qonq.Medium.Tests.csproj --logger "trx;LogFileName=TestResults.trx"
+
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: src/Qonq.Medium.Tests/TestResults/TestResults.trx
